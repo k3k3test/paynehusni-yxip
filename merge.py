@@ -1,8 +1,8 @@
 import requests
 
 urls = [
-    "https://raw.githubusercontent.com/ymyuuu/IPDB/main/bestcf.txt",
-    "https://raw.githubusercontent.com/ymyuuu/IPDB/main/bestproxy.txt"
+    "https://raw.githubusercontent.com/ymyuuu/IPDB/refs/heads/main/BestProxy/bestproxy.txt",
+    "https://raw.githubusercontent.com/ymyuuu/IPDB/refs/heads/main/BestCF/bestcfv6.txt"
 ]
 
 merged_content = ""
@@ -14,9 +14,9 @@ for url in urls:
         lines = response.text.strip().split("\n")
         
         if "bestcf" in url:
-            suffix = ":8433#bestcf"
+            suffix = ":433#bestcf"
         elif "bestproxy" in url:
-            suffix = ":8433#bestproxy"
+            suffix = ":433#bestproxy"
         else:
             suffix = ""
         
